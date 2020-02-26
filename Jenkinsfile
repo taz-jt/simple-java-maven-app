@@ -15,10 +15,12 @@ node {
         git 'https://github.com/taz-jt/simple-java-maven-app'
     }
 
+    /*
     stage('Version') {
         sh "echo \'\ninfo.build.version=\'$version >> src/main/resources/application.properties || true"
         sh "mvn -B -V -U -e versions:set -DnewVersion=$version"
     }
+    */
 
     stage('Build') {
         sh 'mvn -B -V -U -e clean package'
