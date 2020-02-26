@@ -23,7 +23,7 @@ node {
     */
 
     stage('Build') {
-        sh 'mvn -B -V -U -e clean package'
+        sh 'mvn -B -DskipTests clean package'
     }
 
     stage('Test') {
